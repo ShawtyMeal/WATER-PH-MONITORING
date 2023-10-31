@@ -66,34 +66,34 @@
 						<a href="plantinfo.html" class="dropdown-item">
 							<!-- Notif Start -->
 							<div class="callout callout-danger">
-							<div class="media">
-								<img src="pics/arce.jpeg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-								<div class="media-body">
-									<h3 class="dropdown-item-title">
-										Leaf Lettuce
-										<span class="float-right text-sm text-primary"><i class="fas fa-star"></i></span>
-									</h3>
-									<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+								<div class="media">
+									<img src="pics/arce.jpeg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+									<div class="media-body">
+										<h3 class="dropdown-item-title">
+											Leaf Lettuce
+											<span class="float-right text-sm text-primary"><i class="fas fa-star"></i></span>
+										</h3>
+										<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+									</div>
 								</div>
 							</div>
-						</div>
 							<!-- Notif End -->
 						</a>
 						<div class="dropdown-divider"></div>
 						<a href="plantinfo2.html" class="dropdown-item">
 							<!-- Notif Start -->
 							<div class="callout callout-warning">
-							<div class="media">
-								<img src="pics/logo.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
-								<div class="media-body">
-									<h3 class="dropdown-item-title">
-										Water Spinatch
-										<span class="float-right text-sm text-orange"><i class="fas fa-star"></i></span>
-									</h3>
-									<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+								<div class="media">
+									<img src="pics/logo.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
+									<div class="media-body">
+										<h3 class="dropdown-item-title">
+											Water Spinatch
+											<span class="float-right text-sm text-orange"><i class="fas fa-star"></i></span>
+										</h3>
+										<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+									</div>
 								</div>
 							</div>
-						</div>
 							<!-- Notif End -->
 						</a>
 						<div class="dropdown-divider"></div>
@@ -458,150 +458,52 @@
     	darkModeButton.addEventListener('click', toggleDarkMode);
     </script>
 
-    <!-- Interactive Area Chart -->
-    <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bar Chart Script -->
     <!-- FLOT CHARTS -->
     <script src="plugins/flot/jquery.flot.js"></script>
     <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
     <script src="plugins/flot/plugins/jquery.flot.resize.js"></script>
-    <!-- Page specific script -->
-    <!-- bs-custom-file-input -->
-    <script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+    <script src="plugins/flot/plugins/jquery.flot.pie.js"></script>
     <script>
     	$(function () {
+
     /*
-     * Flot Interactive Chart
-     * -----------------------
-     */
-    // We use an inline data source in the example, usually data would
-    // be fetched from a server
-    		var data        = [],
-    		totalPoints = 100
-
-    		function getRandomData() {
-
-    			if (data.length > 0) {
-    				data = data.slice(1)
-    			}
-
-      // Do a random walk
-    			while (data.length < totalPoints) {
-
-    				var prev = data.length > 0 ? data[data.length - 1] : 50,
-    				y    = prev + Math.random() * 10 - 5
-
-    				if (y < 0) {
-    					y = 0
-    				} else if (y > 100) {
-    					y = 100
-    				}
-
-    				data.push(y)
-    			}
-
-      // Zip the generated y values with the x values
-    			var res = []
-    			for (var i = 0; i < data.length; ++i) {
-    				res.push([i, data[i]])
-    			}
-
-    			return res
-    		}
-
-    		var interactive_plot = $.plot('#interactive', [
-    		{
-    			data: getRandomData(),
-    		}
-    		],
-    		{
-    			grid: {
-    				borderColor: '#f3f3f3',
-    				borderWidth: 1,
-    				tickColor: '#f3f3f3'
-    			},
-    			series: {
-    				color: '#3c8dbc',
-    				lines: {
-    					lineWidth: 2,
-    					show: true,
-    					fill: true,
-    				},
-    			},
-    			yaxis: {
-    				min: 0,
-    				max: 100,
-    				show: true
-    			},
-    			xaxis: {
-    				show: true
-    			}
-    		}
-    		)
-
-    var updateInterval = 500 //Fetch data ever x milliseconds
-    var realtime       = 'on' //If == to on then fetch data every x seconds. else stop fetching
-    function update() {
-
-    	interactive_plot.setData([getRandomData()])
-
-      // Since the axes don't change, we don't need to call plot.setupGrid()
-    	interactive_plot.draw()
-    	if (realtime === 'on') {
-    		setTimeout(update, updateInterval)
-    	}
-    }
-
-    //INITIALIZE REALTIME DATA FETCHING
-    if (realtime === 'on') {
-    	update()
-    }
-    //REALTIME TOGGLE
-    $('#realtime .btn').click(function () {
-    	if ($(this).data('toggle') === 'on') {
-    		realtime = 'on'
-    	}
-    	else {
-    		realtime = 'off'
-    	}
-    	update()
-    })
-    /*
-     * END INTERACTIVE CHART
-     */
-  })
-
-/*
      * BAR CHART
      * ---------
      */
 
-    	var bar_data = {
-    		data : [[1, 10], [2, 8], [3, 4], [4, 13], [5, 17], [6, 9], [7, 17]],
-    		bars: { show: true }
-    	};
+    		var bar_data = {
+    			data : [[1, 10], [2, 8], [3, 4], [4, 13], [5, 17], [6, 9], [7, 17]],
+    			bars: { show: true }
+    		};
 
-    	$.plot('#bar-chart', [bar_data], {
-    		grid: {
-    			borderWidth: 1,
-    			borderColor: '#f3f3f3',
-    			tickColor: '#f3f3f3',
-    		},
-    		series: {
-    			bars: {
-    				show: true,
-    				barWidth: 0.5,
-    				align: 'center',
+    		$.plot('#bar-chart', [bar_data], {
+    			grid: {
+    				borderWidth: 1,
+    				borderColor: '#f3f3f3',
+    				tickColor: '#f3f3f3',
     			},
-    		},
-    		colors: ['#3c8dbc'],
-    		xaxis: {
-    			ticks: [[1, 'Monday'], [2, 'Tuesday'], [3, 'Wednesday'], [4, 'Thursday'], [5, 'Friday'], [6, 'Saturday'], [7, 'Sunday']]
-    		},
-
-    	});
+    			series: {
+    				bars: {
+    					show: true,
+    					barWidth: 0.5,
+    					align: 'center',
+    				},
+    			},
+    			colors: ['#3c8dbc', '#e84a57'],
+    			xaxis: {
+    				ticks: [[1, 'Monday'], [2, 'Tuesday'], [3, 'Wednesday'], [4, 'Thursday'], [5, 'Friday'], [6, 'Saturday'], [7, 'Sunday']]
+    			},
+    			yaxis: { 
+    				min: 0, 
+    				max: 100 
+    			}
+    		});
 
     /* END BAR CHART */
+
+    	})
 
   /*
    * Custom Label formatter
@@ -613,9 +515,8 @@
     		+ '<br>'
     		+ Math.round(series.percent) + '%</div>'
     	}
+
     </script>
-
-
 
   </body>
   </html>
