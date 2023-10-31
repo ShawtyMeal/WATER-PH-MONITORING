@@ -28,7 +28,11 @@
 	<!-- summernote -->
 	<link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 	<!-- dark mode css -->
-  <link id="theme-link" rel="stylesheet" href="css/light-mode.css">
+	<link id="theme-link" rel="stylesheet" href="css/light-mode.css">
+	<!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 <body class="control-sidebar-slide-open sidebar-collapse" style="height: auto;">
 	<div class="wrapper">
@@ -148,11 +152,11 @@
             </button>
           </div>
         </div>
-    </div> -->
+      </div> -->
 
-    <!-- Sidebar Menu -->
-    <nav class="mt-2">
-    	<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+      	<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
           	with font-awesome or any other icon font library -->
           	<li class="nav-item">
@@ -184,6 +188,8 @@
           			<i class="fa-solid fa-thumbs-up"></i>
           			<p>Recommendation</p>
           		</a>
+          		<br>
+          		<br>
           	</li>
           	<li class="nav-header">USER</li>
           	<li class="nav-item">
@@ -204,41 +210,185 @@
           	</li>   
 
           </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-  </div>
-  <!-- /.sidebar -->
-</aside>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
 
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-	<!-- Content Header (Page header) -->
-	<div class="content-header">
-		<div class="container-fluid">
-			<div class="row mb-2">
-				<div class="col-sm-6">
-					<h1 class="m-0">Report</h1>
-				</div><!-- /.col -->
-				<div class="col-sm-6">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+    	<!-- Content Header (Page header) -->
+    	<div class="content-header">
+    		<div class="container-fluid">
+    			<div class="row mb-2">
+    				<div class="col-sm-6">
+    					<h1 class="m-0">Report</h1>
+    				</div><!-- /.col -->
+    				<div class="col-sm-6">
 <!--             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">Dashboard v1</li>
-          </ol> -->
-      </div><!-- /.col -->
-  </div><!-- /.row -->
-</div><!-- /.container-fluid -->
-</div>
-<!-- /.content-header -->
+            </ol> -->
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
 
-<!-- Main content -->
-<section class="content">
-	<div class="container-fluid">
-		
-		<p>dito nyo lagay yung content</p>
+    <!-- Main content -->
+    <section class="content">
+    	<div class="container-fluid">
+
+    		<!-- Main content -->
+    		<section class="content">
+    			<div class="container-fluid">
+    				<div class="row">
+    					<div class="col-12">
+    						<div class="card card-primary card-outline">
+    							<div class="card-header">
+    								<h3 class="card-title">
+    									<i class="fa-solid fa-seedling"></i>
+    									Leaf Lettuce Report
+    								</h3>
+    							</div>
+    							<!-- /.card-header -->
+    							<!-- <button type="submit" class="btn btn-danger">Create Narative Report</button> -->
+    							<button onclick="window.location.href = 'narativereport.html';" class="btn btn-primary">Create Narative Report</button>
+    							<div class="card-body">
+    								<table id="example1" class="table table-bordered table-striped">
+    									<thead>
+    										<tr>
+    											<th>No</th>
+    											<th>Plant Name</th>
+    											<th>Date Planted</th>
+    											<th>Harvested Date</th>
+    											<th>Number of Harvests</th>
+    										</tr>
+    									</thead>
+    									<tbody>
+    										<tr>
+    											<td>1</td>
+    											<td>Leaf Lettuce</td>
+    											<td>9/15/23</td>
+    											<td>10/15/23</td>
+    											<td>5</td>
+    										</tr>
+    										<tr>
+    											<td>2</td>
+    											<td>Leaf Lettuce 2</td>
+    											<td>9/15/23</td>
+    											<td>10/15/23</td>
+    											<td>10</td>
+    										</tr>
+    										<tr>
+    											<td>3</td>
+    											<td>Leaf Lettuce 3</td>
+    											<td>9/15/23</td>
+    											<td>10/15/23</td>
+    											<td>15</td>
+    										</tr>
+    										<tr>
+    											<td>4</td>
+    											<td>Leaf Lettuce 4</td>
+    											<td>9/15/23</td>
+    											<td>10/15/23</td>
+    											<td>20</td>
+    										</tr>
+    									</tbody>
+    									<tfoot>
+    										<tr>
+    											<th>No</th>
+    											<th>Plant Name</th>
+    											<th>Date Planted</th>
+    											<th>Harvested Date</th>
+    											<th>Number of Harvests</th>
+    										</tr>
+    									</tfoot>
+    								</table>
+    							</div>
+    							<!-- /.card-body -->
+    						</div>
+    						<!-- /.card -->
 
 
-		
+    						<div class="card card-primary card-outline">
+    							<div class="card-header">
+    								<h3 class="card-title">
+    									<i class="fa-solid fa-seedling"></i>
+    									Water Spinach
+    								</h3>
+    							</div>
+    							<!-- /.card-header -->
+    							<!-- <button type="submit" class="btn btn-danger">Create Narative Report</button> -->
+    							<button onclick="window.location.href = 'narativereport.html';" class="btn btn-primary">Create Narative Report</button>
+    							<div class="card-body">
+    								<table id="example4" class="table table-bordered table-striped">
+    									<thead>
+    										<tr>
+    											<th>No</th>
+    											<th>Plant Name</th>
+    											<th>Date Planted</th>
+    											<th>Harvested Date</th>
+    											<th>Number of Harvests</th>
+    										</tr>
+    									</thead>
+    									<tbody>
+    										<tr>
+    											<td>1</td>
+    											<td>Water Spinach</td>
+    											<td>9/15/23</td>
+    											<td>10/15/23</td>
+    											<td>5</td>
+    										</tr>
+    										<tr>
+    											<td>2</td>
+    											<td>Water Spinach 2</td>
+    											<td>9/15/23</td>
+    											<td>10/15/23</td>
+    											<td>10</td>
+    										</tr>
+    											<tr>
+    											<td>3</td>
+    											<td>Water Spinach 3</td>
+    											<td>9/15/23</td>
+    											<td>10/15/23</td>
+    											<td>15</td>
+    										</tr>
+    											<tr>
+    											<td>4</td>
+    											<td>Water Spinach 4</td>
+    											<td>9/15/23</td>
+    											<td>10/15/23</td>
+    											<td>20</td>
+    										</tr>
+    									</tbody>
+    									<tfoot>
+    										<tr>
+    											<th>No</th>
+    											<th>Plant Name</th>
+    											<th>Date Planted</th>
+    											<th>Harvested Date</th>
+    											<th>Number of Harvests</th>
+    										</tr>
+    									</tfoot>
+    								</table>
+    							</div>
+    							<!-- /.card-body -->
+    						</div>
+    						<!-- /.card -->
+
+    					</div>
+    					<!-- /.col -->
+    				</div>
+    				<!-- /.row -->
+    			</div>
+    			<!-- /.container-fluid -->
+    		</section>
+    		<!-- /.content -->
+    	</div>
+    	<!-- /.content-wrapper -->
 
 
 
@@ -251,14 +401,17 @@
 
 
 
-	</div>
-</div>
-<footer class="main-footer">
-	<strong>Copyright &copy; 2023-2024</strong>
-	All rights reserved.
-	<div class="float-right d-none d-sm-inline-block">
-	</div>
-</footer>
+
+
+
+    </div>
+    <footer class="main-footer">
+    	<strong>Copyright &copy; 2023-2024</strong>
+    	All rights reserved.
+    	<div class="float-right d-none d-sm-inline-block">
+    	</div>
+    </footer>
+  </div>
 </div>
 </section>
 </div>
@@ -298,34 +451,78 @@
 <!-- JavaScript function to toggle dark mode -->
 <script>
   // Get references to elements and local storage
-const darkModeButton = document.getElementById('darkModeButton');
-const body = document.body;
-const themeLink = document.getElementById('theme-link');
-const isDarkMode = localStorage.getItem('darkMode') === 'true';
+	const darkModeButton = document.getElementById('darkModeButton');
+	const body = document.body;
+	const themeLink = document.getElementById('theme-link');
+	const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
 // Function to toggle dark mode
-function toggleDarkMode() {
-  if (body.classList.contains('dark-mode')) {
-    body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'false');
-    themeLink.href = 'light-mode.css';
-  } else {
-    body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'true');
-    themeLink.href = 'dark-mode.css';
-  }
-}
+	function toggleDarkMode() {
+		if (body.classList.contains('dark-mode')) {
+			body.classList.remove('dark-mode');
+			localStorage.setItem('darkMode', 'false');
+			themeLink.href = 'light-mode.css';
+		} else {
+			body.classList.add('dark-mode');
+			localStorage.setItem('darkMode', 'true');
+			themeLink.href = 'dark-mode.css';
+		}
+	}
 
 // Set the initial state based on local storage
-if (isDarkMode) {
-  body.classList.add('dark-mode');
-  themeLink.href = 'dark-mode.css';
-}
+	if (isDarkMode) {
+		body.classList.add('dark-mode');
+		themeLink.href = 'dark-mode.css';
+	}
 
 // Add a click event listener to the dark mode button
-darkModeButton.addEventListener('click', toggleDarkMode);
+	darkModeButton.addEventListener('click', toggleDarkMode);
 </script>
+<!-- DataTables  & Plugins -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
 
+  $("#example4").DataTable({
+    "responsive": true, "lengthChange": false, "autoWidth": false,
+    "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+  }).buttons().container().appendTo('#example4_wrapper .col-md-6:eq(0)');
+  $('#example2').DataTable({
+    "paging": true,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false,
+    "responsive": true,
+  });
+</script>
 
 
 
