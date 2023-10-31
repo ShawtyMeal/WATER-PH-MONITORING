@@ -28,7 +28,7 @@
 	<!-- summernote -->
 	<link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 	<!-- dark mode css -->
-  <link id="theme-link" rel="stylesheet" href="css/light-mode.css">
+	<link id="theme-link" rel="stylesheet" href="css/light-mode.css">
 </head>
 <body class="control-sidebar-slide-open sidebar-collapse" style="height: auto;">
 	<div class="wrapper">
@@ -65,31 +65,35 @@
 						<span class="dropdown-item dropdown-header">2 Notifications</span>
 						<a href="plantinfo.html" class="dropdown-item">
 							<!-- Notif Start -->
+							<div class="callout callout-danger">
 							<div class="media">
 								<img src="pics/arce.jpeg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
 								<div class="media-body">
 									<h3 class="dropdown-item-title">
 										Leaf Lettuce
-										<span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+										<span class="float-right text-sm text-primary"><i class="fas fa-star"></i></span>
 									</h3>
 									<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
 								</div>
 							</div>
+						</div>
 							<!-- Notif End -->
 						</a>
 						<div class="dropdown-divider"></div>
 						<a href="plantinfo2.html" class="dropdown-item">
 							<!-- Notif Start -->
+							<div class="callout callout-warning">
 							<div class="media">
 								<img src="pics/logo.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
 								<div class="media-body">
 									<h3 class="dropdown-item-title">
 										Water Spinatch
-										<span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+										<span class="float-right text-sm text-orange"><i class="fas fa-star"></i></span>
 									</h3>
 									<p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
 								</div>
 							</div>
+						</div>
 							<!-- Notif End -->
 						</a>
 						<div class="dropdown-divider"></div>
@@ -148,11 +152,11 @@
             </button>
           </div>
         </div>
-    </div> -->
+      </div> -->
 
-    <!-- Sidebar Menu -->
-    <nav class="mt-2">
-    	<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+      	<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
           	with font-awesome or any other icon font library -->
           	<li class="nav-item">
@@ -204,41 +208,168 @@
           	</li>  
 
           </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-  </div>
-  <!-- /.sidebar -->
-</aside>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
 
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-	<!-- Content Header (Page header) -->
-	<div class="content-header">
-		<div class="container-fluid">
-			<div class="row mb-2">
-				<div class="col-sm-6">
-					<h1 class="m-0">History</h1>
-				</div><!-- /.col -->
-				<div class="col-sm-6">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+    	<!-- Content Header (Page header) -->
+    	<div class="content-header">
+    		<div class="container-fluid">
+    			<div class="row mb-2">
+    				<div class="col-sm-6">
+    					<h1 class="m-0">History</h1>
+    				</div><!-- /.col -->
+    				<div class="col-sm-6">
 <!--             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">Dashboard v1</li>
-          </ol> -->
-      </div><!-- /.col -->
-  </div><!-- /.row -->
-</div><!-- /.container-fluid -->
-</div>
-<!-- /.content-header -->
+            </ol> -->
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
 
-<!-- Main content -->
-<section class="content">
-	<div class="container-fluid">
-		
-		<p>dito nyo lagay yung content</p>
+    <!-- Main content -->
+    <section class="content">
+    	<div class="container-fluid">
+
+    		<div class="row">
+    			<div class="col-md-12">
+    				<!-- Bar chart -->
+    				<div class="card card-primary card-outline">
+    					<div class="card-header">
+    						<h3 class="card-title">
+    							<i class="far fa-chart-bar"></i>
+    							Bar Chart
+    						</h3>
+    					</div>
+    					<div class="card-body">
+    						<div id="bar-chart" style="height: 400px;"></div>
+    					</div>
+    					<!-- /.card-body-->
+    				</div>
+    				<!-- /.card -->
+
+    				<div class="row">
+    					<div class="col-12">
+    						<div class="card card-primary card-outline">
+    							
+    							<!-- /.card-header -->
+    							<!-- <button type="submit" class="btn btn-danger">Create Narative Report</button> -->
+    							<button onclick="window.location.href = '#';" class="btn btn-primary">Create Narative Report</button>
+    							<div class="card-body">
+    								<table id="example1" class="table table-bordered table-striped">
+    									<thead>
+    										<tr>
+    											<th>No</th>
+    											<th>Plant Name</th>
+    											<th>Date</th>
+    											<th>Alert Time</th>
+    											<th>PH Level</th>
+    											<th>Time Solved</th>
+    											<th>PH Level</th>
+    											<th>Total Time Solved</th>
+    										</tr>
+    									</thead>
+    									<tbody>
+    										<tr>
+    											<td>1</td>
+    											<td>Leaf Lettuce</td>
+    											<td>9/15/23</td>
+    											<td>4:28 AM</td>
+    											<td>
+    												<div class="progress progress-xs">
+    													<div class="progress-bar bg-orange" style="width: 100%"></div>
+    												</div>
+    											</td>
+    											<td>5:00 AM</td>
+    											<td>
+    												<div class="progress progress-xs">
+    													<div class="progress-bar bg-primary" style="width: 100%"></div>
+    												</div>
+    											</td>
+    											<td>32 Minutes</td>
+    										</tr>
+    										<tr>
+    											<td>2</td>
+    											<td>Leaf Lettuce 2</td>
+    											<td>9/15/23</td>
+    											<td>9:38 AM</td>
+    											<td>
+    												<div class="progress progress-xs">
+    													<div class="progress-bar bg-orange" style="width: 100%"></div>
+    												</div>
+    											</td>
+    											<td>10:00 AM</td>
+    											<td>
+    												<div class="progress progress-xs">
+    													<div class="progress-bar bg-primary" style="width: 100%"></div>
+    												</div>
+    											</td>
+    											<td>22 Minutes</td>
+    										</tr>
+    										<tr>
+    											<td>3</td>
+    											<td>Leaf Lettuce 3</td>
+    											<td>9/15/23</td>
+    											<td>11:36 AM</td>
+    											<td>
+    												<div class="progress progress-xs">
+    													<div class="progress-bar bg-orange" style="width: 100%"></div>
+    												</div>
+    											</td>
+    											<td>12:00 PM</td>
+    											<td>
+    												<div class="progress progress-xs">
+    													<div class="progress-bar bg-primary" style="width: 100%"></div>
+    												</div>
+    											</td>
+    											<td>24 Minutes</td>
+    										</tr>
+    										<tr>
+    											<td>4</td>
+    											<td>Leaf Lettuce 4</td>
+    											<td>9/15/23</td>
+    											<td>7:19 PM</td>
+    											<td>
+    												<div class="progress progress-xs">
+    													<div class="progress-bar bg-orange" style="width: 100%"></div>
+    												</div>
+    											</td>
+    											<td>10:00 PM</td>
+    											<td>
+    												<div class="progress progress-xs">
+    													<div class="progress-bar bg-primary" style="width: 100%"></div>
+    												</div>
+    											</td>
+    											<td>14 Minutes</td>
+    										</tr>
+    									</tbody>
+    									<tfoot>
+    										<tr>
+    											<th>No</th>
+    											<th>Plant Name</th>
+    											<th>Date</th>
+    											<th>Alert Time</th>
+    											<th>PH Level</th>
+    											<th>Time Solved</th>
+    											<th>PH Level</th>
+    											<th>Total Time Solved</th>
+    										</tr>
+    									</tfoot>
+    								</table>
+    							</div>
+    							<!-- /.card-body -->
+    						</div>
+    						<!-- /.card -->
 
 
-		
 
 
 
@@ -251,83 +382,240 @@
 
 
 
-	</div>
-</div>
-<footer class="main-footer">
-	<strong>Copyright &copy; 2023-2024</strong>
-	All rights reserved.
-	<div class="float-right d-none d-sm-inline-block">
-	</div>
-</footer>
-</div>
-</section>
-</div>
-</div>
-<!-- ./wrapper -->
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-	$.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
-<!-- JavaScript function to toggle dark mode -->
-<script>
+    					</div>
+    				</div>
+    			</div>
+    		</section>
+    	</div>
+    	<footer class="main-footer">
+    		<strong>Copyright &copy; 2023-2024</strong>
+    		All rights reserved.
+    		<div class="float-right d-none d-sm-inline-block">
+    		</div>
+    	</footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+    	$.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js"></script>
+    <!-- JavaScript function to toggle dark mode -->
+    <script>
   // Get references to elements and local storage
-const darkModeButton = document.getElementById('darkModeButton');
-const body = document.body;
-const themeLink = document.getElementById('theme-link');
-const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    	const darkModeButton = document.getElementById('darkModeButton');
+    	const body = document.body;
+    	const themeLink = document.getElementById('theme-link');
+    	const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
 // Function to toggle dark mode
-function toggleDarkMode() {
-  if (body.classList.contains('dark-mode')) {
-    body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'false');
-    themeLink.href = 'light-mode.css';
-  } else {
-    body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'true');
-    themeLink.href = 'dark-mode.css';
-  }
-}
+    	function toggleDarkMode() {
+    		if (body.classList.contains('dark-mode')) {
+    			body.classList.remove('dark-mode');
+    			localStorage.setItem('darkMode', 'false');
+    			themeLink.href = 'light-mode.css';
+    		} else {
+    			body.classList.add('dark-mode');
+    			localStorage.setItem('darkMode', 'true');
+    			themeLink.href = 'dark-mode.css';
+    		}
+    	}
 
 // Set the initial state based on local storage
-if (isDarkMode) {
-  body.classList.add('dark-mode');
-  themeLink.href = 'dark-mode.css';
-}
+    	if (isDarkMode) {
+    		body.classList.add('dark-mode');
+    		themeLink.href = 'dark-mode.css';
+    	}
 
 // Add a click event listener to the dark mode button
-darkModeButton.addEventListener('click', toggleDarkMode);
-</script>
+    	darkModeButton.addEventListener('click', toggleDarkMode);
+    </script>
+
+    <!-- Interactive Area Chart -->
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- FLOT CHARTS -->
+    <script src="plugins/flot/jquery.flot.js"></script>
+    <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+    <script src="plugins/flot/plugins/jquery.flot.resize.js"></script>
+    <!-- Page specific script -->
+    <!-- bs-custom-file-input -->
+    <script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script>
+    	$(function () {
+    /*
+     * Flot Interactive Chart
+     * -----------------------
+     */
+    // We use an inline data source in the example, usually data would
+    // be fetched from a server
+    		var data        = [],
+    		totalPoints = 100
+
+    		function getRandomData() {
+
+    			if (data.length > 0) {
+    				data = data.slice(1)
+    			}
+
+      // Do a random walk
+    			while (data.length < totalPoints) {
+
+    				var prev = data.length > 0 ? data[data.length - 1] : 50,
+    				y    = prev + Math.random() * 10 - 5
+
+    				if (y < 0) {
+    					y = 0
+    				} else if (y > 100) {
+    					y = 100
+    				}
+
+    				data.push(y)
+    			}
+
+      // Zip the generated y values with the x values
+    			var res = []
+    			for (var i = 0; i < data.length; ++i) {
+    				res.push([i, data[i]])
+    			}
+
+    			return res
+    		}
+
+    		var interactive_plot = $.plot('#interactive', [
+    		{
+    			data: getRandomData(),
+    		}
+    		],
+    		{
+    			grid: {
+    				borderColor: '#f3f3f3',
+    				borderWidth: 1,
+    				tickColor: '#f3f3f3'
+    			},
+    			series: {
+    				color: '#3c8dbc',
+    				lines: {
+    					lineWidth: 2,
+    					show: true,
+    					fill: true,
+    				},
+    			},
+    			yaxis: {
+    				min: 0,
+    				max: 100,
+    				show: true
+    			},
+    			xaxis: {
+    				show: true
+    			}
+    		}
+    		)
+
+    var updateInterval = 500 //Fetch data ever x milliseconds
+    var realtime       = 'on' //If == to on then fetch data every x seconds. else stop fetching
+    function update() {
+
+    	interactive_plot.setData([getRandomData()])
+
+      // Since the axes don't change, we don't need to call plot.setupGrid()
+    	interactive_plot.draw()
+    	if (realtime === 'on') {
+    		setTimeout(update, updateInterval)
+    	}
+    }
+
+    //INITIALIZE REALTIME DATA FETCHING
+    if (realtime === 'on') {
+    	update()
+    }
+    //REALTIME TOGGLE
+    $('#realtime .btn').click(function () {
+    	if ($(this).data('toggle') === 'on') {
+    		realtime = 'on'
+    	}
+    	else {
+    		realtime = 'off'
+    	}
+    	update()
+    })
+    /*
+     * END INTERACTIVE CHART
+     */
+  })
+
+/*
+     * BAR CHART
+     * ---------
+     */
+
+    	var bar_data = {
+    		data : [[1, 10], [2, 8], [3, 4], [4, 13], [5, 17], [6, 9], [7, 17]],
+    		bars: { show: true }
+    	};
+
+    	$.plot('#bar-chart', [bar_data], {
+    		grid: {
+    			borderWidth: 1,
+    			borderColor: '#f3f3f3',
+    			tickColor: '#f3f3f3',
+    		},
+    		series: {
+    			bars: {
+    				show: true,
+    				barWidth: 0.5,
+    				align: 'center',
+    			},
+    		},
+    		colors: ['#3c8dbc'],
+    		xaxis: {
+    			ticks: [[1, 'Monday'], [2, 'Tuesday'], [3, 'Wednesday'], [4, 'Thursday'], [5, 'Friday'], [6, 'Saturday'], [7, 'Sunday']]
+    		},
+
+    	});
+
+    /* END BAR CHART */
+
+  /*
+   * Custom Label formatter
+   * ----------------------
+   */
+    	function labelFormatter(label, series) {
+    		return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
+    		+ label
+    		+ '<br>'
+    		+ Math.round(series.percent) + '%</div>'
+    	}
+    </script>
 
 
 
-
-</body>
-</html>
+  </body>
+  </html>
